@@ -1,0 +1,28 @@
+{
+  "name": "localface",
+  "version": "0.0.1",
+  "description": "100+ human faces to provide, especially for test",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Fritz-Lium/localface.git"
+  },
+  "keywords": [
+    "face",
+    "avatar",
+    "random",
+    "user"
+  ],
+  "author": "Fritz-Lium <fritzlium@gmail.com> (https://github.com/Fritz-Lium)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fritz-Lium/localface/issues"
+  },
+  "homepage": "https://github.com/Fritz-Lium/localface",
+	"devDependencies": {
+		"mocha": "1.16.2"
+	}
+}
