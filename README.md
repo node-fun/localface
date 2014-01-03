@@ -21,13 +21,14 @@ All photos are picked from <http://randomuser.me/>
 
 	```js
 	var localface = require('localface');
-	var womenCount = localface.womenCount;
+	var womenCount = localface.count['f'];
 	```
 
 3. Get a file path
 
 	```js
-	var file = localface.getWoman(_.random(0, womenCount - 1));
-	file;	// "/home/fritz/Dev/npm/localface/portraits/women/59.jpg"
-	fs.existsSync(file);	// true
+	var file = localface.get('f', _.random(0, womenCount - 1));
+	file;		// "/home/fritz/Dev/npm/localface/portraits/women/59.jpg"
+	fs.existsSync(file);		// true
+	localface.get('m');		// random one
 	```

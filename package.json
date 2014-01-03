@@ -1,6 +1,6 @@
 {
   "name": "localface",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "100+ human faces to provide, especially for test",
   "main": "index.js",
   "scripts": {

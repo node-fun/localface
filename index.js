@@ -1,35 +1,35 @@
 /**
  * Created by fritz on 1/2/14.
  */
-var path = require('path')
-	, fs = require('fs');
+var path = require('path'),
+	fs = require('fs');
 
-var dir = path.resolve(__dirname, 'portraits')
-	, womenDir = path.join(dir, 'women')
-	, menDir = path.join(dir, 'men');
+var home = path.join(__dirname, 'portraits'),
+	dir = {
+		'f': path.join(home, 'women'),
+		'm': path.join(home, 'men')
+	};
 
-var womenList = fs.readdirSync(womenDir)
-		.sort(function (a, b) {
-			return parseInt(a) - parseInt(b)
-		})
-	, menList = fs.readdirSync(menDir)
-		.sort(function (a, b) {
-			return parseInt(a) - parseInt(b)
-		})
-	, womenCount = womenList.length
-	, menCount = menList.length;
+var s = function (a, b) {
+		return parseInt(a) - parseInt(b);
+	},
+	files = {
+		'f': fs.readdirSync(dir['f']).sort(s),
+		'm': fs.readdirSync(dir['m']).sort(s)
+	},
+	count = {
+		'f': files['f'].length,
+		'm': files['m'].length
+	};
 
-// export counts
-exports.womenCount = womenCount;
-exports.menCount = menCount;
+// export count
+exports.count = count;
 
-// export gets
-exports.getWoman = function (index) {
-	if (!womenList[index]) return null;
-	return path.join(womenDir, womenList[index]);
-}
-exports.getMan = function (index) {
-	if (!menList[index]) return null;
-	return path.join(menDir, menList[index]);
-}
-
+// export get
+exports.get = function (gender, index) {
+	if (index == null) {
+		index = ~~(Math.random() * count[gender]);
+	}
+	if (!files[gender][index]) return null;
+	return path.join(dir[gender], files[gender][index]);
+};
