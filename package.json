@@ -1,6 +1,6 @@
 {
   "name": "localface",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "100+ human faces to provide, especially for test",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Fritz-Lium/localface.git"
+    "url": "git@github.com:node-fun/localface.git"
   },
   "keywords": [
     "face",
@@ -19,9 +19,9 @@
   "author": "Fritz-Lium <fritzlium@gmail.com> (https://github.com/Fritz-Lium)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Fritz-Lium/localface/issues"
+    "url": "https://github.com/node-fun/localface/issues"
   },
-  "homepage": "https://github.com/Fritz-Lium/localface",
+  "homepage": "https://github.com/node-fun/localface",
 	"devDependencies": {
 		"mocha": "1.16.2"
 	}
